@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="normalize.css">
+    <link rel="Stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Kalkulator walut</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h1 class="form_header">Kalkulator walut</h1>
+            <form class="js-form">
+                <p>
+                    <label>
+                        <span class="form_text">
+                            Podaj kwote w zł*
+                        </span>
+                        <input type="number" required step="0.01" class="js-amount form_amount" placeholder="  Wpisz ilość zł">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span class="form_text">
+                            Waluta:
+                        </span>
+                        <select class="form_select js-currency">
+                            <option selected value="USD">Dolar amerykański</option>
+                            <option value="EUR">Euro</option>
+                            <option value="GBP">Funt brytyjski</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <button class="form_submit">Oblicz</button>
+                </p>
+                <span class="js-result form_result"></span>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+let select = document.querySelector(".select");
+let form = document.querySelector(".form");
+let polewynik = document.querySelector(".wynik");
+let zl = document.querySelector(".zl");
+
+let rateEUR = 4.4278;
+let rateGBP = 4.9384;
+let rateUSD = 3.9058;
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    let amount = +zl.value;
+    let currency = select.value;
+
+    let result;
+
+    switch (currency) {
+        case "EUR":
+            result = amount / rateEUR;
+            break;
+
+        case "GBP":
+            result = amount / rateGBP;
+            break;
+
+        case "USD":
+            result = amount / rateUSD;
+            break;
+
+    }
+    
+    polewynik.innerHTML = `${amount.toFixed(2)} PLN = <strong>${result.toFixed(2)} ${currency} </strong>`;
+});
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator walut</title>
+    <link rel="Stylesheet" href="normalize.css">
+    <link rel="Stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <form class="form">
+        <input type="number" class="zl" required placeholder="Podaj ilosc zl">
+        <select class="select">
+        <option selected value="EUR">Euro</option>
+        <option value="USD">Dolary</option>
+        <option value="GBP">Funty</option> 
+    </select>
+    <button class="oblicz">przelicz</button>
+    <span class="wynik"></span>
+    </form>
+</body>
+</html>
