@@ -21,11 +21,14 @@
         <div class="main">
             <h1 class="form_header">Kalkulator walut</h1>
             <form class="js-form">
+                <div class="form_grid">
                 <p>
                     <label>
                         <span class="form_text">
                             Podaj kwote w zł*
                         </span>
+                    </p>
+                        <p>    
                         <input type="number" required step="0.01" class="js-amount form_amount" placeholder="  Wpisz ilość zł">
                     </label>
                 </p>
@@ -34,6 +37,8 @@
                         <span class="form_text">
                             Waluta:
                         </span>
+                    </p>
+                    <p>
                         <select class="form_select js-currency">
                             <option selected value="USD">Dolar amerykański</option>
                             <option value="EUR">Euro</option>
@@ -41,6 +46,7 @@
                         </select>
                     </label>
                 </p>
+            </div>
                 <p class="paragraph">Dane z dnia 13.01.2022</p>
                 <p>
                     <button class="form_submit">Oblicz</button>
